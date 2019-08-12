@@ -48,13 +48,13 @@ fun ListsAndArraysCollections() {
     }
 
     for (i in 'a'..'f') print(i)
-    println("=========")
+    println("  == for letters ==")
     for (i in 1..6) print(i)
-    println("=========")
+    println(" == for numbers ==")
     for (i in 5 downTo 1) print(i)
-    println("=========")
+    println(" == for downTo ==")
     for (i in 3..6 step 2) print(i)
-    println("=========")
+    println(" == for step ==")
 
 }
 
