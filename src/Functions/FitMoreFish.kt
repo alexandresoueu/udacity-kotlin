@@ -37,7 +37,7 @@ canAddFish(10.0, listOf(), 7, true) ---> true
 */
 
 fun main() {
-    canAddFish(1.1, listOf(1, 2, 3), 3, false)
+    canAddFish(10.0, listOf(3, 3, 3))
 }
 
 fun canAddFish(tankSize: Double, currentFish: List<Int>, fishSize: Int = 2, hasDecorations: Boolean = true): Boolean {

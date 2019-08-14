@@ -5,6 +5,9 @@ import java.util.*
 fun main(args: Array<String>) {
     println("Hello, ${args[0]}")
     feedTheFish()
+    println("===============================")
+    eagerExample()
+    println("===============================")
 
     var bubbles = 0
     while (bubbles < 50) {
@@ -14,6 +17,26 @@ fun main(args: Array<String>) {
     repeat(2) {
         println("A fish is swimming!")
     }
+}
+
+fun eagerExample() {
+    val decorations = listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
+    val eager = decorations.filter { it[0] == 'p' }
+
+    println(eager)
+
+    val filtered = decorations.asSequence().filter { it[0] == 'p' }
+    println("bad ... " + filtered)
+    println("good " + filtered.toList())
+
+    val lazyMap = decorations.asSequence().map {
+        println("map: $it ")
+        it
+    }
+
+    println(lazyMap)
+    println("First ${lazyMap.first()}")
+    println("All ${lazyMap.toList()}")
 }
 
 fun getDirtySensorReading() = 20
