@@ -3,6 +3,7 @@ package Classes
 
 fun main() {
     buildAquarium()
+    makeFish()
 }
 
 fun buildAquarium() {
@@ -31,4 +32,18 @@ fun buildAquarium() {
             "Width: ${myAquariumTwo.width} " +
             "Height: ${myAquariumTwo.height}"
     )
+}
+
+fun feedFish(fish: FishAction) {
+    fish.eat()
+}
+
+fun makeFish() {
+    val shark = Shark()
+    val pleco = Plecostomus()
+
+    println("Shark: ${shark.color} \n Plecostomus: ${pleco.color}")
+
+    shark.eat()
+    pleco.eat()
 }
