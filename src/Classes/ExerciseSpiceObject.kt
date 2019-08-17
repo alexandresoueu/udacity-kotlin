@@ -38,6 +38,9 @@ fun main() {
             "Heat: ${simpleSpice.heat}"
     )
 
+    val showSpice = Spice("curry", "extremely spicy")
+    println(showSpice.heat)
+
 }
 
 
@@ -52,7 +55,7 @@ class SimpleSpice() {
 
 class Spice(val name: String, val spiciness: String = "mild") {
 
-    private val heat: Int
+    val heat: Int
         get() {
             return when (spiciness) {
                 "mild" -> 1
@@ -80,3 +83,4 @@ val spice = Spice("cayenne", spiciness = "spicy")
 val spicelist = spices1.filter { it.heat < 5 }
 
 fun makeSalt() = Spice("Salt")
+

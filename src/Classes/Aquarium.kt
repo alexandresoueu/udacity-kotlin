@@ -1,14 +1,16 @@
 package Classes
 
-class Aquarium(var width: Int = 20, var height: Int = 40, var lenght: Int = 100) {
+import kotlin.math.PI
 
-    var volume: Int
+open class Aquarium(var width: Int = 20, var height: Int = 40, var lenght: Int = 100) {
+
+    open var volume: Int
         get() = width * height * lenght / 1000
         set(value) {
             height = (value * 1000) / (width * lenght)
         }
 
-    var water = volume * 0.9
+    open var water = volume * 0.9
 
     constructor(numberOfFish: Int) : this() {
 
@@ -23,4 +25,16 @@ class Aquarium(var width: Int = 20, var height: Int = 40, var lenght: Int = 100)
 //    }
 
 //    fun volume() = width * lenght / 1000
+
+}
+
+class TowerTank() : Aquarium() {
+    override var water = volume * 0.8
+
+    override var volume: Int
+        get() = (width * height * lenght / 1000 * PI).toInt()
+        set(value) {
+            height = (value * 1000) / (width * height)
+        }
+
 }
