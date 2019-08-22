@@ -24,6 +24,14 @@ Let’s put this into practice using building materials and a building that need
     If you did this correctly, running main() will print something like “400 Wood required”.
 
 */
+fun main(args: Array<String>) {
+    Building(Wood()).build()
+
+//Output
+//
+//400 Wood required
+}
+
 
 open class BaseBuildingMaterial() {
     open val numberNeeded = 1
@@ -47,10 +55,4 @@ class Building<T : BaseBuildingMaterial>(val buildingMaterial: T) {
     }
 }
 
-fun main(args: Array<String>) {
-    Building(Wood()).build()
-}
 
-//Output
-//
-//400 Wood required
