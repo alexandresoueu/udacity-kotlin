@@ -1,4 +1,4 @@
-package Classes.Generics.AquariumGenerics
+package Classes.Generics
 
 /*Practice Time
 
